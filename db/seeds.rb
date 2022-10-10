@@ -7,20 +7,38 @@
 #   Character.create(name: "Luke", movie: movies.first)
 Product.delete_all
 # . . .
-Product.create!(title: 'Design and Build Great Web APIs',
-description:
-%{<p>
-<em>Robust, Reliable, and Resilient</em>
-APIs are transforming the business world at an increasing pace. Gain
-the essential skills needed to quickly design, build, and deploy
-quality web APIs that are robust, reliable, and resilient. Go from
-initial design through prototyping and implementation to deployment of
-mission-critical APIs for your organization. Test, secure, and deploy
-your API with confidence and avoid the “release into production”
-panic. Tackle just about any API challenge with more than a dozen
-open-source utilities and common programming patterns you can apply
-right away.
-</p>},
-image_url: 'maapis.jpg',
-price: 24.95)
+Product.create!([
+{title: 'Design and Build Great Web APIs',
+    description:
+    %{<p>
+    <em>Robust, Reliable, and Resilient</em>
+    APIs are transforming the business world at an increasing pace. Gain
+    the essential skills needed to quickly design, build, and deploy
+    quality web APIs that are robust, reliable, and resilient. Go from
+    initial design through prototyping and implementation to deployment of
+    mission-critical APIs for your organization. Test, secure, and deploy
+    your API with confidence and avoid the “release into production”
+    panic. Tackle just about any API challenge with more than a dozen
+    open-source utilities and common programming patterns you can apply
+    right away.
+    </p>},
+    image_url: 'maapis.jpg',
+    price: 24.95}, 
+{title: 'Docker for Rails Developer',
+    description:
+    %{Docker is a service that provides the ability to package and run an application in an isolated environment called a container. 
+    With adequate isolation and security it allows you to run multiple containers at the same time on a particular host.},
+    image_url: 'docker.jpg',
+    price: 19.20},
+{title: 'The Seventhsky',
+    description:
+    %{develop web application from Zero to Launch, from Launch to scale},
+    image_url: 'seventhsky.jpg',
+    price: 300.20}, 
+{title: 'Android Phone for 2022',
+    description:
+    %{Android is a Linux-based operating system with open source code and licensed under APACHE 2.0 which is 
+    designed for various touch screen mobile devices such as smartphones and tablet computers.},
+    image_url: 'android.jpg',
+    price: 299.99},])
 # . . .

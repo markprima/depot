@@ -24,7 +24,7 @@ Product.create!([
     </p>},
     image_url: 'maapis.jpg',
     price: 24.95}, 
-{title: 'Docker for Rails Developer',
+{title: 'Docker',
     description:
     %{Docker is a service that provides the ability to package and run an application in an isolated environment called a container. 
     With adequate isolation and security it allows you to run multiple containers at the same time on a particular host.},
@@ -35,10 +35,16 @@ Product.create!([
     %{develop web application from Zero to Launch, from Launch to scale},
     image_url: 'seventhsky.jpg',
     price: 300.20}, 
-{title: 'Android Phone for 2022',
+{title: 'Android',
     description:
     %{Android is a Linux-based operating system with open source code and licensed under APACHE 2.0 which is 
     designed for various touch screen mobile devices such as smartphones and tablet computers.},
     image_url: 'android.jpg',
-    price: 299.99},])
+    price: 299.99},
+{title: 'Midtrans',
+    description:
+    %{Payment Gateway Indonesia which is equipped with advanced anomaly detection to protect your transaction process and data. 
+    Our team of analysts combines AI, machine learning and complex formulas to assess the risk of each transaction. Hassle-free, this security makes for an increase in successful transactions that will ensure your revenue growth..},
+    image_url: 'midtrans.jpg',
+    price: 159.99}])
 # . . .

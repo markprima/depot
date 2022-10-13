@@ -31,6 +31,7 @@ class ProductTest < ActiveSupport::TestCase
     product.price = 1
     assert product.valid?
   end
+
   def new_product(image_url)
     Product.new(title: "Second product",
     description: "this is the second product ",
@@ -52,5 +53,6 @@ class ProductTest < ActiveSupport::TestCase
       assert new_product(image_url).invalid?,
               "#{image_url} must be invalid"
     end
+    
   end
 end

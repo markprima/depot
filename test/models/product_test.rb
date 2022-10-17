@@ -13,6 +13,18 @@ class ProductTest < ActiveSupport::TestCase
     assert product.errors[:kind].any?
   end
 
+  test "product is not valid without a unique title" do
+    product = Product.new(title: products(:ruby).title,
+
+    description: "yyy",
+    price: 1,
+    image_url: "fred.gif",
+    kind: 1)
+
+    assert product.invalid?
+    assert_equal ["has already been taken"], product.errors[:title]
+  end
+
   test "product price must be positive" do
     product = Product.new(
     title: "New product",

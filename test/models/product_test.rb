@@ -45,15 +45,6 @@ class ProductTest < ActiveSupport::TestCase
     assert product.invalid?
   end
 
-  def new_product(image_url)
-    Product.new(title: "Second product",
-    description: "this is the second product ",
-    price: 1,
-    image_url: image_url,
-    kind: 1)
-
-  end
-
   test "image url" do
     ok = %w{ fred.gif fred.jpg fred.png FRED.JPG FRED.Jpg
              http://a.b.c/x/y/z/fred.gif }
@@ -69,20 +60,25 @@ class ProductTest < ActiveSupport::TestCase
               "#{image_url} must be invalid"
     end
   end
-
+  
   test "kind number numbers only consist of zero to two" do 
-    oke = %w{ 0 1 2 }
-    bad = %w{ 3 4 5.more }
+    oke = %w{ book magazine newspaper }
+    bad = %w{ orange mango }
 
     oke.each do |kind|
-      assert new_product(kind).invalid?,
-        "#{kind} must be valid"
+      assert new_product('image.jpg', kind).valid?
     end
 
     bad.each do |kind|
-      assert new_product(kind).invalid?
-        "#{kind} must be valid"
+      assert_raise(ArgumentError) { new_product('image.jpg', kind) }
     end
   end 
   
+  def new_product(image_url, kind = "book")
+    Product.new(title: "Second product",
+    description: "this is the second product ",
+    price: 1,
+    image_url: image_url,
+    kind: kind)
+  end
 end

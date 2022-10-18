@@ -70,7 +70,7 @@ class ProductTest < ActiveSupport::TestCase
     end
   end
 
-  test "kind number must be just from 0 to 2" do 
+  test "kind number numbers only consist of zero to two" do 
     oke = %w{ 0 1 2 }
     bad = %w{ 3 4 5.more }
 

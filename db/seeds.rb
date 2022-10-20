@@ -31,7 +31,7 @@ Product.create!([
     With adequate isolation and security it allows you to run multiple containers at the same time on a particular host.},
     image_url: 'docker.jpg',
     price: 19.20,
-    kind: 2},
+    kind: 1},
 {title: 'The Seventhsky',
     description:
     %{develop web application from Zero to Launch, from Launch to scale},
@@ -44,7 +44,7 @@ Product.create!([
     designed for various touch screen mobile devices such as smartphones and tablet computers.},
     image_url: 'android.jpg',
     price: 299.99,
-    kind: 2},
+    kind: 1},
 {title: 'Midtrans',
     description:
     %{Payment Gateway Indonesia which is equipped with advanced anomaly detection to protect your transaction process and data. 

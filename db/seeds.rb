@@ -25,31 +25,32 @@ Product.create!([
     image_url: 'maapis.jpg',
     price: 24.95,
     kind: 1}, 
-{title: 'Docker',
+{title: 'Docker Setup',
     description:
     %{Docker is a service that provides the ability to package and run an application in an isolated environment called a container. 
     With adequate isolation and security it allows you to run multiple containers at the same time on a particular host.},
     image_url: 'docker.jpg',
     price: 19.20,
-    kind: 1},
-{title: 'The Seventhsky',
+    kind: 2},
+{title: 'Agile Web Developer with Rails 7',
     description:
-    %{develop web application from Zero to Launch, from Launch to scale},
-    image_url: 'seventhsky.jpg',
-    price: 300.20, 
+    %{Rails 7 completely redefines what it means to produce fantastic user experiences and provides a way to achieve all the benefits of single-page applications - at a fraction of the complexity.
+     Rails 7 integrates the Hotwire frameworks of Stimulus and Turbo directly as the new defaults, together with that hot newness of import maps.
+     The result is a toolkit so powerful that it allows a single individual to create modern applications upon which they can build a competitive business. The way it used to be.},
+    image_url: 'rails.jpg',
+    price: 31.95, 
     kind: 0}, 
-{title: 'Android',
+{title: 'Android Setup',
     description:
     %{Android is a Linux-based operating system with open source code and licensed under APACHE 2.0 which is 
     designed for various touch screen mobile devices such as smartphones and tablet computers.},
     image_url: 'android.jpg',
-    price: 299.99,
+    price: 40.99,
     kind: 1},
-{title: 'Midtrans',
+{title: 'The Psychology of Money',
     description:
-    %{Payment Gateway Indonesia which is equipped with advanced anomaly detection to protect your transaction process and data. 
-    Our team of analysts combines AI, machine learning and complex formulas to assess the risk of each transaction. Hassle-free, this security makes for an increase in successful transactions that will ensure your revenue growth..},
-    image_url: 'midtrans.jpg',
+    %{The book Psychology of Money by Morgan Housel illustrates that a person's psychology has a major influence on his financial condition.},
+    image_url: 'money.jpg',
     price: 159.99,
-    kind: 2}])
+    kind: 0}])
 # . . .

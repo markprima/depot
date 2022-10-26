@@ -8,7 +8,7 @@ one:
   kind: 1
 
 two:
-  title: MyString
+  title: lontong
   description: MyText
   image_url: lorem.jpg
   price: 9.99

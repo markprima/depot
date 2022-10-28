@@ -5,6 +5,7 @@
     <%= line_item.product.title %>
   </td>
   <td class="text-right font-bold">
+    <%#= sprintf("$%0.02f", line_item.total_price) %>
     <%= number_to_currency(line_item.total_price) %>
   </td>
 </tr>

@@ -20,7 +20,7 @@
             </p>
 
             <div class="mt-3">
-            <!-- <%= sprintf("$%0.02f", product.price) %> -->
+            <%#= sprintf("$%0.02f", product.price) %>
             <%#= number_to_currency(product.price, precision: 2) %>
             <%= format_price(product.price)%>
             <%= button_to 'Add to Cart',

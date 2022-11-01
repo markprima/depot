@@ -42,8 +42,7 @@ Product.create!([
     kind: 0}, 
 {title: 'Android Setup',
     description:
-    %{Android is a Linux-based operating system with open source code and licensed under APACHE 2.0 which is 
-    designed for various touch screen mobile devices such as smartphones and tablet computers.},
+    %{<strong>Android set up</strong>},
     image_url: 'android.jpg',
     price: 40.99,
     kind: 1},

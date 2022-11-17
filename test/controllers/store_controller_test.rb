@@ -6,7 +6,7 @@ class StoreControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select 'nav a', minimum: 4
     assert_select 'main ul li', 3
-    assert_select 'h2', 'lontong'
-    assert_select 'div', /\$ [,\d]+\.\d\d/
+    assert_select 'h2', 'programming ruby'
+    assert_select 'div', /\$[,\d]+\.\d\d/
   end
 end

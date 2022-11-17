@@ -8,7 +8,7 @@ one:
   kind: 1
 
 two:
-  title: lontong
+  title: programming ruby
   description: MyText
   image_url: lorem.jpg
   price: 9.99

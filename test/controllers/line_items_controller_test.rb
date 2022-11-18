@@ -59,4 +59,8 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
     assert_match /<tr class="line-item-highlight">/, @response.body
   end
 
+  test "line_item should not duplicate" do
+    
+  end
+
 end

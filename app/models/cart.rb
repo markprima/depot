@@ -22,5 +22,5 @@ class Cart < ApplicationRecord
     # def increase_quantity(product)
     #     current_item.decrement!(:quantity)
     # end
-    #note: current_item masih belum bisa dipanggil dari method lain
+    
 end

@@ -63,7 +63,7 @@ class ProductTest < ActiveSupport::TestCase
   
   test "kind number numbers only consist of zero to two" do 
     oke = %w{ book magazine newspaper }
-    bad = %w{ orange mango }
+    bad = %w{ green mango }
 
     oke.each do |kind|
       assert new_product('image.jpg', kind).valid?

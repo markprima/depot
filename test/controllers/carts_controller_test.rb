@@ -25,18 +25,18 @@ class CartsControllerTest < ActionDispatch::IntegrationTest
 
   test "should show cart" do
     get cart_url(@cart)
-    assert_response :success
+    assert_response :redirect 
   end
 
   test "should get edit" do
     get edit_cart_url(@cart)
-    assert_response :success
+    assert_response :redirect
   end
 
   test "should update cart" do
-    patch cart_url(@cart), params: { cart: {  } }
+    patch cart_url(@cart), params: { cart: { } }
     assert_redirected_to cart_url(@cart)
-  end
+  end 
 
   test "should destroy cart" do
     post line_items_url, params: { product_id: products(:ruby).id }

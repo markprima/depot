@@ -54,13 +54,13 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
     assert_difference('LineItem.count') do
       post line_items_url, params: { product_id: products(:ruby).id },
       as: :turbo_stream 
-  end
+    end
     assert_response :success
     assert_match /<tr class="line-item-highlight">/, @response.body
   end
 
   test "line_item should not duplicate" do
-    
+  
   end
 
 end

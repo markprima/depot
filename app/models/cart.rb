@@ -15,12 +15,4 @@ class Cart < ApplicationRecord
         line_items.sum { |item| item.total_price }
     end
 
-    # def decrease_quantity(product)
-    #     current_item.decrement!(:quantity)
-    # end 
-      
-    # def increase_quantity(product)
-    #     current_item.decrement!(:quantity)
-    # end
-    
 end

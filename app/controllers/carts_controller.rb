@@ -1,8 +1,6 @@
 class CartsController < ApplicationController
-  include Devise::Controllers::Helpers
-  before_action :authenticate_with_http_digest
   before_action :set_cart, only: %i[ show edit update destroy ]
-  before_action :validate_cart_ownership, only: %i[ show edit update destroy ]
+  before_action :validate_cart, only: %i[ show edit update destroy ]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
 
   # GET /carts or /carts.json
@@ -84,14 +82,15 @@ class CartsController < ApplicationController
       redirect_to store_index_url, notice: 'Invalid cart'
     end
 
-    def validate_cart_ownership
-      # Jika cart yang dimaksud bukan milik user yang sedang login, redirect ke halaman login
+    def validate_cart
+      # If the cart in question does not belong to the user who is currently logged in, 
+      # redirect to the home page
       unless @cart.id == session[:cart_id]
         redirect_to store_index_url, notice: 'Please log in to continue.'
       end
     end
 
-    # store_index_path => "/store" => sebaiknya di view pakai ini
-    # store_index_url => "http://locahost:3000/store" => sebaiknya pakai ini di controller
+    # store_index_path => "/store" => should be used in the views action
+    # store_index_url => "http://locahost:3000/store" => should be used in the controller action
 
 end

@@ -40,27 +40,27 @@ class LineItemsController < ApplicationController
 
   # PATCH/PUT /line_items/1 or /line_items/1.json
   def update
-    @line_item.decrement(:quantity)
-    @line_item.save
     respond_to do |format|
-      if @line_item.quantity
-        format.html { redirect_to store_index_url, notice:  "your cart has been deducted"}
-      if @line_item.quantity
-        format.html { redirect_to store_index_url, notice: "your cart is nil"}
-        # waktu line_item.quantity == 0, masih kebaca line_item.quantity
+      if @line_item.update(line_item_params)
+        format.html { redirect_to line_item_url(@line_item), 
+          notice: "Line item was successfully updated." }
+        format.json { render :show, status: :ok, location: @line_item }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+        format.json { render json: @line_item.errors, status: :unprocessable_entity }
       end
     end
-  end
-    # respond_to do |format|
-    #   if @line_item.update(line_item_params)
-    #     format.html { redirect_to line_item_url(@line_item), 
-    #       notice: "Line item was successfully updated." }
-    #     format.json { render :show, status: :ok, location: @line_item }
-    #   else
-    #     format.html { render :edit, status: :unprocessable_entity }
-    #     format.json { render json: @line_item.errors, status: :unprocessable_entity }
-    #   end
-    # end
+  #   @line_item.decrement(:quantity)
+  #   @line_item.save
+  #   respond_to do |format|
+  #     if @line_item.quantity
+  #       format.html { redirect_to store_index_url, notice:  "your cart has been deducted"}
+  #     if @line_item.quantity
+  #       format.html { redirect_to store_index_url, notice: "your cart is nil"}
+  #       # waktu line_item.quantity == 0, masih kebaca line_item.quantity
+  #     end
+  #   end
+  # end
   end
 
   # DELETE /line_items/1 or /line_items/1.json
